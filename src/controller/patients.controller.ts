@@ -46,7 +46,7 @@ export const getPatients = async (
 export const getPatient = async (
   req: Request,
   res: Response
-): Promise<Response<Patient>> => {
+): Promise<Response<HttpResponse[]>> => {
   console.info(
     `[${new Date().toLocaleString()}] Incoming ${req.method}${
       req.originalUrl
@@ -91,7 +91,7 @@ export const getPatient = async (
 export const createPatient = async (
   req: Request,
   res: Response
-): Promise<Response<Patient>> => {
+): Promise<Response<HttpResponse>> => {
   console.info(
     `[${new Date().toLocaleString()}] Incoming ${req.method}${
       req.originalUrl
@@ -132,7 +132,7 @@ export const createPatient = async (
 export const updatePatient = async (
   req: Request,
   res: Response
-): Promise<Response<Patient>> => {
+): Promise<Response<HttpResponse>> => {
   console.info(
     `[${new Date().toLocaleString()}] Incoming ${req.method}${
       req.originalUrl
@@ -183,7 +183,7 @@ export const updatePatient = async (
 export const deletePatient = async (
   req: Request,
   res: Response
-): Promise<Response<Patient>> => {
+): Promise<Response<HttpResponse>> => {
   console.info(
     `[${new Date().toLocaleString()}] Incoming ${req.method}${
       req.originalUrl
